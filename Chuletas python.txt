@@ -1,0 +1,21 @@
+- len() Cuenta caracteres.significa longitud/length
+- a.count(b) Cuenta cuantas b hay en a.
+- a.split(b) Quita b de a.Por ejemplo:   INPUT: print(coche.split(c))   OUTPUT: ['o, 'he'].Con palabras las divide.cadena =      "                                                                                               hola mundo python"
+                                                                                                palabras = cadena.split()
+                                                                                                print(palabras)
+                                                                                                ['hola', 'mundo','python']
+-elif es como muchos if.        if beneficios>150:print("Ganas mucho")
+                                elif beneficios>100:print("Ganas lo promedio")
+                                elif beneficios<50:print("ganas muy poco")
+- int+flt=flt
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
