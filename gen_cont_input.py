@@ -1,55 +1,45 @@
-#generador de contraseñas
-
+from random import choices,shuffle
 import string
-
-from random import choices,shuffle,choice
-
-
-def crear():
+def crear(sa):
     while True:
-        opcion = input("¿Qué tipo de contraseña quieres generar? (letras, numeros o todo): ")
-        
-        if opcion == "todo":
-            signos = choices(['@', '#', '?', '¿', '¡', '!', '*', '/', '-', '_'], k=2)
-            letras = choices(string.ascii_letters + string.ascii_uppercase, k=4)
-            prim_letras = choices(string.ascii_letters + string.ascii_uppercase, k=1)
-            numeros = choices([str(i) for i in range(0, 9)], k=3)
+        signos=choices(['@' , '#' , "?" , "¿" '¡' , "!" , '*' , '/' , '-' , '_'],k=2)
+        letras=choices(string.ascii_letters+ string.ascii_uppercase,k=4)
 
-            cuerpo = signos + letras + numeros
-            shuffle(cuerpo)
-            todo = [*prim_letras, *cuerpo]
-            print("Contraseña generada: " + "".join(todo))
+        prim_letras=choices(string.ascii_letters + string.ascii_uppercase,k=1)
+        numeros=choices(str(i for i in range(0,9)),k=3)
+
+        cuerpo = signos+letras+numeros
+        shuffle(cuerpo)
+        "".join(cuerpo)
+
+        todo = *prim_letras, *cuerpo
+        
+        
+        
+        if "todo" in sa:
             
-        elif opcion == "numeros":
-            numeros2 = choices([str(i) for i in range(0, 9)], k=8)
-            print("Contraseña generada: " + "".join(numeros2))
+                cosa3=input("Presiona enter para generar una contraseña con letras, números y símbolos o escribe 'volver' para elegir el tipo.")
+                print(*todo, sep="")
+                if  "volver" in cosa3:
+                    
+                    break    
+        elif "numeros" in sa:
+                cosa=input("Presiona enter para generar una contraseña de sólo números o escribe 'volver' para elegir el tipo.")
             
-        elif opcion == "letras":
-            letras2 = choices(string.ascii_letters + string.ascii_uppercase, k=8)
-            print("Contraseña generada: " + "".join(letras2))
+                numeros2=choices(str(i for i in range(0,9)),k=8)
+                print(*numeros2, sep="")
+                if  "volver" in cosa:
+                    break
+        elif "letras" in sa:
+                cosa2=input("Presiona enter para generar una contraseña de sólo letras o escribe 'volver' para elegir el tipo.")
             
-        elif opcion == "salir":
-            break
-            
+                letras2=choices(string.ascii_letters+ string.ascii_uppercase,k=8)
+                print(*letras2, sep="")
+                if  "volver" in cosa2:
+                    break
         else:
-            print("Opción inválida. Por favor, elige entre letras, numeros o todo.")
-            continue
-            
-        
-        
-        
-        
+            print("No disponible")
+            break
+while True:
+    crear(input("Que caracteres quieres que tenga la contraseña?(Todo, letras o numeros)"))
     
-        
-    
-
-crear()
-    
-    
-    
-   
-
-    
-
-
-
