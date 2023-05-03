@@ -7,7 +7,9 @@ else:
    
 b=(input("¿Quieres añadir otro? "))
 if b == "si":c=int(input("Dime otro número y te diré si es par o impar otra vez"))
-if b == "no":print("No te cagues")
+if b == "no":print("Ok")
+
+
 if c % 2 == 0:
     print("paaaaar")
 else:print("impaar")
